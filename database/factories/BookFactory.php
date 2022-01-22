@@ -17,7 +17,7 @@ class BookFactory extends Factory
         return [
             'title' => $this->faker->sentence(),
             'isbn' => $this->faker->isbn10(),
-            'publisher_id'=> Publisher::factory()->create(),
+            'publisher_id' => Publisher::factory()->create()
         ];
     }
 }
