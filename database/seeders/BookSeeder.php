@@ -1,0 +1,24 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Author;
+use App\Models\Book;
+use App\Models\Publisher;
+use Illuminate\Database\Seeder;
+
+class BookSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Book::factory(5)
+            ->has(Author::factory(2))
+            ->has(Publisher::factory())
+            ->create();
+    }
+}
